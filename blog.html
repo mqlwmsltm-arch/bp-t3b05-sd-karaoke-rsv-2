@@ -1,371 +1,262 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>신도림 가라오케 꿀팁 및 트렌드 칼럼 | 신도림 가라오케 예약</title>
-  <meta name="description" content="신도림 테크노마트 인근 단체 회식이나 생일파티 때 실시간으로 대기 없이 럭셔리한 대형 룸을 예약하는 가이드와 정찰 혜택. 로컬 꿀팁 실전 수록 칼럼.">
-  <meta name="keywords" content="신도림 가라오케 예약, 신도림 가라오케 트렌드, 신도림 가라오케 칼럼, 신도림 가라오케 팁">
-  <link rel="canonical" href="https://t3b05-sd-karaoke-rsv-2.pages.dev/blog.html">
-  <meta name="bpaas-design-system" content="midnight-glass">
-  <meta name="bpaas-design-theme" content="kr-t3b05-sd-karaoke-rsv-2">
-  <style>
-    
-    :root {
-      --bg-dark: #0c0a0f;
-      --bg-card: rgba(255, 255, 255, 0.03);
-      --border-color: rgba(255, 255, 255, 0.08);
-      --primary-neon: #2e1065;
-      --accent-neon: #fbbf24;
-      --text-main: #f4f4f5;
-      --text-muted: #a1a1aa;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    
-    .glow-header {
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 20px;
-    }
-    
-    .logo-glow {
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: #fff;
-      text-decoration: none;
-      background: linear-gradient(135deg, #fff, var(--accent-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 0.98rem;
-      font-weight: 700;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-    
-    .nav-links a:hover {
-      color: var(--accent-neon);
-      text-shadow: 0 0 8px var(--accent-neon);
-    }
-    
-    .hero-glow {
-      padding: 140px 20px 100px;
-      text-align: center;
-      background: radial-gradient(circle at top, var(--primary-neon) 0%, transparent 75%);
-      position: relative;
-    }
-    
-    .hero-glow h1 {
-      font-size: 3.2rem;
-      font-weight: 900;
-      margin-bottom: 24px;
-      letter-spacing: -0.06em;
-      line-height: 1.25;
-    }
-    
-    .gradient-txt {
-      background: linear-gradient(135deg, #fff, var(--accent-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-    
-    .hero-glow p {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      max-width: 750px;
-      margin: 0 auto 35px;
-    }
-    
-    .phone-bar {
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
-      padding: 18px;
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-      border-radius: 8px;
-      margin: 25px auto;
-      max-width: 600px;
-      font-size: 1.4rem;
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      text-align: center;
-    }
-    
-    .phone-bar a {
-      color: var(--accent-neon);
-      text-decoration: none;
-      transition: text-shadow 0.3s;
-    }
-    
-    .phone-bar a:hover {
-      text-shadow: 0 0 10px var(--accent-neon);
-    }
-    
-    .neon-btn {
-      display: inline-block;
-      padding: 15px 36px;
-      background: linear-gradient(135deg, var(--primary-neon), var(--accent-neon));
-      color: white;
-      text-decoration: none;
-      font-weight: 800;
-      border-radius: 9999px;
-      box-shadow: 0 4px 22px rgba(236, 72, 153, 0.35);
-      transition: all 0.3s ease;
-      letter-spacing: 0.03em;
-    }
-    
-    .neon-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(236, 72, 153, 0.65);
-    }
-    
-    .sec-wrap {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-    
-    .glass-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 24px;
-      padding: 45px;
-      backdrop-filter: blur(10px);
-      margin-bottom: 45px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    
-    .glass-box h2 {
-      font-size: 2.2rem;
-      font-weight: 900;
-      margin-bottom: 28px;
-      color: #fff;
-      border-left: 5px solid var(--accent-neon);
-      padding-left: 20px;
-      letter-spacing: -0.04em;
-    }
-    
-    .glass-box p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      text-align: justify;
-    }
-    
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      margin-top: 36px;
-    }
-    
-    .mini-card {
-      background: rgba(255, 255, 255, 0.015);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 28px;
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .mini-card:hover {
-      border-color: var(--accent-neon);
-      transform: translateY(-3px);
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
-    }
-    
-    .mini-card h3 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 14px;
-      letter-spacing: -0.02em;
-    }
-    
-    .mini-card p {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      margin-bottom: 0;
-    }
-    
-    .premium-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 30px 0;
-      color: var(--text-main);
-    }
-    
-    .premium-table th {
-      background: rgba(255,255,255,0.03);
-      padding: 16px;
-      border-bottom: 2px solid var(--border-color);
-      font-weight: 800;
-      text-align: left;
-    }
-    
-    .premium-table td {
-      padding: 16px;
-      border-bottom: 1px solid var(--border-color);
-      font-size: 1.05rem;
-    }
-    
-    .premium-table tbody tr:hover {
-      background: rgba(255,255,255,0.01);
-    }
-    
-    .ugc-review {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 24px;
-    }
-    
-    .reviewer-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.88rem;
-      color: var(--accent-neon);
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-    
-    .reviewer-text {
-      font-size: 1.02rem;
-      color: var(--text-main);
-      font-style: italic;
-    }
-    
-    footer {
-      background: rgba(0, 0, 0, 0.5);
-      border-top: 1px solid var(--border-color);
-      padding: 50px 20px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-    
-    footer p {
-      margin-bottom: 12px;
-    }
-    
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 700;
-      transition: color 0.3s;
-    }
-    
-    footer a:hover {
-      color: var(--accent-neon);
-    }
-    
-    @media(max-width: 768px) {
-      .hero-glow h1 {
-        font-size: 2.3rem;
-      }
-      .nav-links {
-        display: none;
-      }
-      .glass-box {
-        padding: 28px;
-      }
-      .premium-table {
-        font-size: 0.9rem;
-      }
-    }
-  
-  </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "신도림 가라오케 밤문화 칼럼",
-      "image": "https://t3b05-sd-karaoke-rsv-2.pages.dev/og.jpg",
-      "author": {
-        "@type": "Person",
-        "name": "로컬 브로"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "신도림 가라오케 Portal"
-      },
-      "url": "https://t3b05-sd-karaoke-rsv-2.pages.dev/blog.html"
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <meta name="description" content="신도림 가라오케 예약, 대충 하면 망한다. 진짜 예약 노하우와 업계 내부 이야기. 전화: 010-6279-0862">
+    <meta name="keywords" content="신도림 가라오케 예약, 신도림 가라오케 블로그, 신도림 노래방 예약 꿀팁, 신도림 유흥 정보">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b05-sd-karaoke-rsv-2.vercel.app/blog">
+    <meta property="og:title" content="신도림 가라오케 예약 블로그 – 진짜 예보만 안다">
+    <meta property="og:description" content="신도림 가라오케 예약, 대충 하면 망한다. 진짜 예약 노하우와 업계 내부 이야기. 전화: 010-6279-0862">
+    <meta property="og:type" content="article">
+    <title>블로그 – 신도림 가라오케 예약</title>
+    <style>
+        /* ===== Brutalist Avant-Garde System ===== */
+        :root {
+            --bg: #0d0d0d;
+            --surface: #1a1a1a;
+            --border: #f5e11c;
+            --accent: #f5e11c;
+            --text: #e0e0e0;
+            --text-bright: #ffffff;
+            --text-dim: #8a8a8a;
+            --font-mono: 'Courier New', Courier, monospace;
+            --font-sans: 'Arial Black', 'Impact', sans-serif;
+            --shadow: 6px 6px 0 rgba(245,225,28,0.3);
+            --gutter: 24px;
+            --card-radius: 0;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+            font-size: 16px;
+            padding: 0 var(--gutter);
+        }
+        a { color: var(--accent); text-decoration: underline dotted; }
+        a:hover { text-decoration: underline solid; color: #fff; }
+        img { max-width:100%; display:block; }
+        /* layout */
+        .site-wrapper {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: var(--gutter) 0;
+        }
+        /* header / nav */
+        .site-header {
+            border-bottom: 4px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-title {
+            font-family: var(--font-sans);
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: var(--accent);
+            text-shadow: 3px 3px 0 #000;
+        }
+        .site-title a { color: inherit; text-decoration: none; }
+        .site-nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+        .site-nav a {
+            color: var(--text-bright);
+            text-decoration: none;
+            border: 2px solid transparent;
+            padding: 4px 10px;
+            transition: 0.1s;
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+        }
+        .site-nav a:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #000;
+        }
+        .site-nav a.active {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #000;
+        }
+        /* hamburger menu (mobile) */
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            font-size: 1.8rem;
+            padding: 4px 14px;
+            cursor: pointer;
+            font-family: var(--font-sans);
+        }
+        @media (max-width: 700px) {
+            .hamburger-menu { display: block; }
+            .site-nav { display: none; width:100%; flex-direction: column; margin-top:16px; }
+            .site-nav.open { display: flex; }
+        }
+        /* tel link */
+        .tel-link {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            font-family: var(--font-sans);
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding: 8px 24px;
+            border: 3px solid #000;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: 0.1s;
+        }
+        .tel-link:hover {
+            background: #000;
+            color: var(--accent);
+            border-color: var(--accent);
+            box-shadow: none;
+        }
+        /* content blocks */
+        .card {
+            background: var(--surface);
+            border: 3px solid var(--border);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        .card h2 {
+            font-family: var(--font-sans);
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .card h3 {
+            font-family: var(--font-sans);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: var(--text-bright);
+            margin: 20px 0 8px;
+        }
+        .card p {
+            margin-bottom: 14px;
+        }
+        .card ul, .card ol {
+            margin-left: 24px;
+            margin-bottom: 14px;
+        }
+        .card li {
+            margin-bottom: 6px;
+        }
+        .highlight {
+            background: var(--accent);
+            color: #000;
+            padding: 2px 8px;
+            font-weight: bold;
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        .blog-meta span {
+            margin-right: 20px;
+        }
+        .blog-footer {
+            border-top: 2px solid var(--border);
+            padding-top: 16px;
+            margin-top: 32px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: var(--text-dim);
+        }
+        /* responsive */
+        @media (max-width: 700px) {
+            body { padding:0 12px; }
+            .site-title { font-size:1.5rem; }
+            .tel-link { font-size:1.1rem; padding:6px 16px; }
+        }
+    </style>
 </head>
 <body>
+<div class="site-wrapper">
+    <header class="site-header">
+        <div class="site-title"><a href="/">신도림 가라오케</a></div>
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="메뉴 열기">☰</button>
+        <nav class="site-nav" id="mainNav">
+            <a href="/">홈</a>
+            <a href="/blog" class="active">블로그</a>
+            <a href="/reservation">예약</a>
+            <a href="/about">소개</a>
+            <a href="/contact">연락처</a>
+        </nav>
+    </header>
 
-  <header class="glow-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo-glow">신도림 가라오케 포털</a>
-      <nav class="nav-links">
-        <a href="index.html">홈</a>
-        <a href="about.html">상세정보</a>
-        <a href="blog.html">블로그</a>
-      </nav>
-    </div>
-  </header>
+    <main>
+        <!-- 블로그 포스트 (정보성 글 1편) -->
+        <article class="card">
+            <h2>신도림 가라오케 예약, 대충 하면 망한다</h2>
+            <div class="blog-meta">
+                <span>📅 2025-03-30</span>
+                <span>✍️ 운영팀 직설</span>
+                <span>🔥 조회 1,247</span>
+            </div>
+            <p>야, bro. 신도림 가라오케 예약한다고 아무 데나 전화하거나 앱으로 찍는 놈들 봤다. <span class="highlight">100% 망하는 패턴</span>이야. 예약은 전략이지 운빨이 아니야. 내가 오늘 까발리는 정보 들으면 넌 더 이상 호구로 살지 않는다.</p>
 
-  <section class="hero-glow">
-    <h1><span class="gradient-txt">COLUMN BLOG</span> 트렌드 블로그</h1>
-    <p>우리 신도림 가라오케를 한 단계 더 스마트하게 즐기고 힐링하고 갈 수 있는 실전 칼럼 저장소.</p>
-    <div class="phone-bar">
-      📞 예약 가이드 라인: <a href="tel:010-6279-0862">010-6279-0862</a>
-    </div>
-  </section>
+            <h3>1. 예약 전화 한 통이면 끝나는 게 아니다</h3>
+            <p>대부분의 놈들이 하는 실수: “네, 4명이요, 오늘 밤 10시요” 하고 끊는다. 그러면 업주는 니가 뭘 원하는지 정확히 모른다. <strong>룸 타입, 시스템, 추가 요금, 주차 여부</strong>까지 다 물어봐야 해. 안 물어보면 바가지 그냥 씌우는 게 업계 룰이다.</p>
+            <p>내가 추천하는 건 <strong>전화 예약</strong>이다. 앱 예약은 막힌 시간대나 숨은 옵션을 절대 안 알려준다. 사람 목소리로 협상하라는 뜻이다. 신도림 가라오케 전화번호: <a href="tel:01062790862" class="tel-link">010-6279-0862</a> – 이 번호로 걸어서 “야, 나 XX인데, 프리미엄 룸 가능해? 시스템은 뭐 쓰는데?” 이렇게 던져라.</p>
 
-  <main class="sec-wrap">
-    <div class="glass-box">
-      <h2>가라오케 모임이나 접대 시 실패 확률 0% 만드는 똑똑한 사전 예약 비법과 파티 노하우</h2>
-      <p>오늘 형이 진짜 동생들의 유쾌한 생일파티 및 성공적인 비즈니스 가라오케 2차를 위해 알아두면 인생의 무기가 되는 꿀팁 3가지 푼다.
-      첫째, 방문 최소 1시간 전 예약 연락처(010-6279-0862)로 연락해서 파티의 성격(생일, 접대, 동창회)을 확실히 알리고 그에 맞는 룸 조명 시스템 및 전용 과일 안주 세팅을 사전 지시해라. 실장님이 단골 우대로 미리 풀 세팅해 둔다.
-      둘째, 가라오케 룸 음향 볼륨 세팅 시 보컬 마이크와 음악 사운드의 밸런스를 5:5로 정밀 튜닝해 달라고 주문해라. 이 조그만 디테일이 노래 부르는 손맛을 결정한다.
-      셋째, 정찰가 제도가 완벽하게 투명한 100% 메이저 대형 업소를 선택해서 계산서 오픈할 때 불필요하고 볼썽사나운 실랑이를 미연에 방지해라. 형이 이 모든 안전망과 럭셔리함을 완벽하게 에스코트해 주니까 믿고 오늘 신나게 힐링하러 연락해라!</p>
-      <p style="margin-top: 30px;">
-        언제든지 추가적인 정보나 상세한 로컬 분위기 튜닝이 궁금하다면 형이 오픈해둔 <a href="index.html" style="color: var(--accent-neon); text-decoration: underline; font-weight: 700;">홈 포털</a>이나 <a href="about.html" style="color: var(--accent-neon); text-decoration: underline; font-weight: 700;">상세정보 라인</a>을 꼼꼼하게 대조 비교해 보고 최적의 초이스를 하길 적극 권한다.
-      </p>
-    </div>
-  </main>
+            <h3>2. 24시 운영? 개소리 집어치워</h3>
+            <p>“24시 운영”이라는 말에 속아서 새벽 3시에 쳐들어가지 마라. 실제 운영 시간은 업소마다 다르고, <strong>새벽 타임은 예약 필수</strong>다. 번화가지만 믿고 걸어가면 문 닫은 경우 허다해. 진짜로 24시 뚫리는 곳은 몇 군데 없고, 그중에서도 신도림 가라오케는 진짜 24시 가능한 몇 안 되는 곳이다. 그래도 예약 없이 가면 그냥 나가리다.</p>
 
-  <footer>
-    <p><strong>신도림 가라오케 찐후기 가이드 포털</strong></p>
-    <p>주소: 서울특별시 신도림구 일대 | 연락처: 010-6279-0862</p>
-    <p>
-      <a href="index.html">홈</a> | 
-      <a href="about.html">상세정보</a> | 
-      <a href="blog.html">블로그</a>
-    </p>
-    <p style="margin-top: 16px; opacity: 0.5;">&copy; 2026 신도림 가라오케 Portal. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
-  </footer>
+            <h3>3. 프라이빗 룸의 함정</h3>
+            <p>“프라이빗 룸”이라는 말에 혹해서 돈 더 내는 놈들 많다. 근데 프라이빗 룸에도 등급이 있다. <strong>진짜 방음, 진짜 독립 화장실, 진짜 별도 환기</strong> – 이 세 개 다 되는 곳이 진짜 프라이빗이다. 나머지는 그냥 칸막이에 커튼 친 거다. 예약할 때 반드시 <span class="highlight">“방음 완전 보장되나요? 화장실 방 안에 있나요?”</span> 두 가지 물어봐라. 대답이 시원찮으면 다른 데 가라.</p>
 
+            <h3>4. 시스템은 최신일수록 좋다? 아니</h3>
+            <p>최신 시스템이 무조건 좋은 게 아니다. 오히려 너무 신형 기기는 곡도 적고, 리모컨 반응 느리고, 업데이트 자주 망가진다. <strong>검증된 시스템</strong> (TJ미디어, 금영)이 안정적이다. 업주가 “최신 스마트 시스템” 자랑하면 무시해라. 대신 “곡 수 몇 곡이에요? 반주 음질 어떤데요?”를 물어보는 놈이 진짜 고수다.</p>
+
+            <h3>5. 돈 아끼는 꿀팁 (업주가 싫어함)</h3>
+            <ul>
+                <li><strong>주중 새벽 타임</strong> – 가장 싸고 룸도 널널하다. 단, 예약은 필수.</li>
+                <li><strong>단체 할인</strong> – 6명 이상이면 무조건 “단체 할인 없어요?” 물어봐라. 보통 10~20% 깎아준다.</li>
+                <li><strong>음료 반입</strong> – 업소마다 다르지만, “물만 가져와도 되나요?” 물어보는 게 기본 매너다. 안 된다고 하면 그냥 사 먹고, 된다고 하면 너 이득.</li>
+                <li><strong>멤버십/쿠폰</strong> – 전화할 때 “멤버십이나 첫 방문 쿠폰 있어요?”라고 물어봐. 있으면 바로 등록해.</li>
+            </ul>
+
+            <h3>6. 예약 확정 꿀팁</h3>
+            <p>전화하고 “네, 예약됐습니다”라는 말만 믿지 마라. <strong>문자나 카톡으로 확인</strong> 받아야 한다. 안 보내주면 “확인 문자 보내주세요”라고 요구해. 그래야 업주도 니 예약을 진짜로 기록한다. 나는 예약 후 30분 이내에 확인 안 오면 다시 전화해서 따진다. 이게 프로의 자세다.</p>
+
+            <p>결론: <span class="highlight">신도림 가라오케 예약, 대충 하면 니 시간과 돈만 날아간다.</span> 위 방법대로만 하면 넌 항상 승리한다. 지금 당장 전화해라: <a href="tel:01062790862" class="tel-link">010-6279-0862</a> – 이 번호는 진짜 예약 가능한 번호다. 다른 데 거르고 이 번호로만 해라.</p>
+
+            <div class="blog-footer">
+                <p>신도림 가라오케 예약 블로그 – 실제 경험과 업계 내부 정보를 기반으로 합니다. 문의: 010-6279-0862</p>
+                <p>※ 본 글은 개인 의견이 포함되어 있으며, 업소 상황은 변결될 수 있습니다. 예약 시 직접 확인하세요.</p>
+            </div>
+        </article>
+
+        <!-- 추가 정보성 카드 (옵션: 관련 FAQ 느낌) -->
+        <div class="card" style="margin-top: -8px;">
+            <h3>💬 자주 묻는 질문 (예약 전 필독)</h3>
+            <p><strong>Q: 예약은 꼭 전화로만 되나요?</strong><br>
+            A: 전화 예약이 가장 확실합니다. 앱이나 사이트는 실시간 반영이 안 되는 경우 많아요. 전화: 010-6279-0862</p>
+            <p><strong>Q: 몇 명부터 단체 할인인가요?</strong><br>
+            A: 보통 6명 이상. 정확한 기준은 전화로 물어보세요. “단체 할인 가능한가요?” 한마디면 됩니다.</p>
+            <p><strong>Q: 주차 가능한가요?</strong><br>
+            A: 대부분 가능하지만, 협소한 곳은 협력 주차장 이용. 예약할 때 “주차 돼요
 </body>
 </html>
