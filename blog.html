@@ -1,262 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <meta name="description" content="신도림 가라오케 예약, 대충 하면 망한다. 진짜 예약 노하우와 업계 내부 이야기. 전화: 010-6279-0862">
-    <meta name="keywords" content="신도림 가라오케 예약, 신도림 가라오케 블로그, 신도림 노래방 예약 꿀팁, 신도림 유흥 정보">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://t3b05-sd-karaoke-rsv-2.vercel.app/blog">
-    <meta property="og:title" content="신도림 가라오케 예약 블로그 – 진짜 예보만 안다">
-    <meta property="og:description" content="신도림 가라오케 예약, 대충 하면 망한다. 진짜 예약 노하우와 업계 내부 이야기. 전화: 010-6279-0862">
-    <meta property="og:type" content="article">
-    <title>블로그 – 신도림 가라오케 예약</title>
-    <style>
-        /* ===== Brutalist Avant-Garde System ===== */
-        :root {
-            --bg: #0d0d0d;
-            --surface: #1a1a1a;
-            --border: #f5e11c;
-            --accent: #f5e11c;
-            --text: #e0e0e0;
-            --text-bright: #ffffff;
-            --text-dim: #8a8a8a;
-            --font-mono: 'Courier New', Courier, monospace;
-            --font-sans: 'Arial Black', 'Impact', sans-serif;
-            --shadow: 6px 6px 0 rgba(245,225,28,0.3);
-            --gutter: 24px;
-            --card-radius: 0;
-        }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: var(--font-mono);
-            line-height: 1.6;
-            font-size: 16px;
-            padding: 0 var(--gutter);
-        }
-        a { color: var(--accent); text-decoration: underline dotted; }
-        a:hover { text-decoration: underline solid; color: #fff; }
-        img { max-width:100%; display:block; }
-        /* layout */
-        .site-wrapper {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: var(--gutter) 0;
-        }
-        /* header / nav */
-        .site-header {
-            border-bottom: 4px solid var(--border);
-            padding-bottom: 12px;
-            margin-bottom: 32px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .site-title {
-            font-family: var(--font-sans);
-            font-size: 2rem;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            color: var(--accent);
-            text-shadow: 3px 3px 0 #000;
-        }
-        .site-title a { color: inherit; text-decoration: none; }
-        .site-nav {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 0.95rem;
-        }
-        .site-nav a {
-            color: var(--text-bright);
-            text-decoration: none;
-            border: 2px solid transparent;
-            padding: 4px 10px;
-            transition: 0.1s;
-            font-family: var(--font-sans);
-            text-transform: uppercase;
-        }
-        .site-nav a:hover {
-            border-color: var(--accent);
-            background: var(--accent);
-            color: #000;
-        }
-        .site-nav a.active {
-            border-color: var(--accent);
-            background: var(--accent);
-            color: #000;
-        }
-        /* hamburger menu (mobile) */
-        .hamburger-menu {
-            display: none;
-            background: none;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            font-size: 1.8rem;
-            padding: 4px 14px;
-            cursor: pointer;
-            font-family: var(--font-sans);
-        }
-        @media (max-width: 700px) {
-            .hamburger-menu { display: block; }
-            .site-nav { display: none; width:100%; flex-direction: column; margin-top:16px; }
-            .site-nav.open { display: flex; }
-        }
-        /* tel link */
-        .tel-link {
-            display: inline-block;
-            background: var(--accent);
-            color: #000;
-            font-family: var(--font-sans);
-            font-size: 1.4rem;
-            font-weight: bold;
-            padding: 8px 24px;
-            border: 3px solid #000;
-            text-decoration: none;
-            box-shadow: var(--shadow);
-            transition: 0.1s;
-        }
-        .tel-link:hover {
-            background: #000;
-            color: var(--accent);
-            border-color: var(--accent);
-            box-shadow: none;
-        }
-        /* content blocks */
-        .card {
-            background: var(--surface);
-            border: 3px solid var(--border);
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: var(--shadow);
-        }
-        .card h2 {
-            font-family: var(--font-sans);
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-        .card h3 {
-            font-family: var(--font-sans);
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            color: var(--text-bright);
-            margin: 20px 0 8px;
-        }
-        .card p {
-            margin-bottom: 14px;
-        }
-        .card ul, .card ol {
-            margin-left: 24px;
-            margin-bottom: 14px;
-        }
-        .card li {
-            margin-bottom: 6px;
-        }
-        .highlight {
-            background: var(--accent);
-            color: #000;
-            padding: 2px 8px;
-            font-weight: bold;
-        }
-        .blog-meta {
-            font-size: 0.85rem;
-            color: var(--text-dim);
-            border-bottom: 1px solid #333;
-            padding-bottom: 8px;
-            margin-bottom: 16px;
-        }
-        .blog-meta span {
-            margin-right: 20px;
-        }
-        .blog-footer {
-            border-top: 2px solid var(--border);
-            padding-top: 16px;
-            margin-top: 32px;
-            font-size: 0.9rem;
-            text-align: center;
-            color: var(--text-dim);
-        }
-        /* responsive */
-        @media (max-width: 700px) {
-            body { padding:0 12px; }
-            .site-title { font-size:1.5rem; }
-            .tel-link { font-size:1.1rem; padding:6px 16px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>신도림 가라오케 블로그 – 예약 체크리스트와 활용 팁</title>
+  <meta name="description" content="신도림 가라오케를 처음 이용하는 분들을 위해 예약 전 확인해야 할 사항, 정산 방식, 연장·조기 종료 처리, 그리고 다음 방문 시 기록 방법을 상세히 안내합니다.">
+  <meta name="keywords" content="신도림 가라오케 예약, 가라오케 이용 안내, 신도림 노래방, 가라오케 정산, 가라오케 연장, 가라오케 체크리스트">
+  <link rel="canonical" href="https://sindorim-song-trend.link-hub.org/blog.html">
+  <meta property="og:title" content="신도림 가라오케 예약 — 처음 이용자를 위한 이용 전 체크리스트">
+  <meta property="og:description" content="첫 방문 고객을 위한 신도림 가라오케 예약 전 체크리스트와 FAQ.">
+  <meta property="og:url" content="https://sindorim-song-trend.link-hub.org/blog.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="author" content="신도림 가라오케 운영팀">
+  <!-- CSS는 기존 디자인 시스템을 그대로 사용합니다 -->
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
-<div class="site-wrapper">
-    <header class="site-header">
-        <div class="site-title"><a href="/">신도림 가라오케</a></div>
-        <button class="hamburger-menu" id="hamburgerBtn" aria-label="메뉴 열기">☰</button>
-        <nav class="site-nav" id="mainNav">
-            <a href="/">홈</a>
-            <a href="/blog" class="active">블로그</a>
-            <a href="/reservation">예약</a>
-            <a href="/about">소개</a>
-            <a href="/contact">연락처</a>
-        </nav>
-    </header>
+<body class="r-head-1g6k">
+  <!-- Header & Navigation -->
+  <header class="k-grid-ck2b">
+    <div class="logo"><a href="/"><img src="/assets/logo.png" alt="신도림 가라오케 로고"></a></div>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" class="menu-btn">☰ 메뉴</label>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="/">홈</a></li>
+        <li><a href="/reservation">예약 안내</a></li>
+        <li><a href="/pricing">가격/정산</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/blog">블로그</a></li>
+        <li><a href="/contact">문의</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <!-- 블로그 포스트 (정보성 글 1편) -->
-        <article class="card">
-            <h2>신도림 가라오케 예약, 대충 하면 망한다</h2>
-            <div class="blog-meta">
-                <span>📅 2025-03-30</span>
-                <span>✍️ 운영팀 직설</span>
-                <span>🔥 조회 1,247</span>
-            </div>
-            <p>야, bro. 신도림 가라오케 예약한다고 아무 데나 전화하거나 앱으로 찍는 놈들 봤다. <span class="highlight">100% 망하는 패턴</span>이야. 예약은 전략이지 운빨이 아니야. 내가 오늘 까발리는 정보 들으면 넌 더 이상 호구로 살지 않는다.</p>
+  <main>
+    <!-- Introduction -->
+    <section>
+      <h1>신도림 가라오케 첫 이용자를 위한 체크리스트</h1>
+      <p>신도림에 새로 오픈한 가라오케를 처음 이용한다면, 어느 정도 준비가 필요합니다. 예약 전 확인해야 할 사항을 미리 점검하면 현장에서의 혼란을 최소화하고, 즐거운 노래 시간을 보낼 수 있거든요. 이 글에서는 예약부터 이용 마무리까지 놓치기 쉬운 포인트들을 단계별로 정리했습니다.</p>
+      <p>특히 초보자를 위한 친절한 안내와 함께, 상황별(인원, 시점, 목적)로 체크해야 할 항목을 추가로 제시합니다. “예약은 했지만 언제까지 연장이 가능한가?” 같은 궁금증도 여기서 해결해 보세요.</p>
+    </section>
 
-            <h3>1. 예약 전화 한 통이면 끝나는 게 아니다</h3>
-            <p>대부분의 놈들이 하는 실수: “네, 4명이요, 오늘 밤 10시요” 하고 끊는다. 그러면 업주는 니가 뭘 원하는지 정확히 모른다. <strong>룸 타입, 시스템, 추가 요금, 주차 여부</strong>까지 다 물어봐야 해. 안 물어보면 바가지 그냥 씌우는 게 업계 룰이다.</p>
-            <p>내가 추천하는 건 <strong>전화 예약</strong>이다. 앱 예약은 막힌 시간대나 숨은 옵션을 절대 안 알려준다. 사람 목소리로 협상하라는 뜻이다. 신도림 가라오케 전화번호: <a href="tel:01062790862" class="tel-link">010-6279-0862</a> – 이 번호로 걸어서 “야, 나 XX인데, 프리미엄 룸 가능해? 시스템은 뭐 쓰는데?” 이렇게 던져라.</p>
+    <!-- 1. 예약 전 꼭 확인할 3가지 -->
+    <section>
+      <h2>예약 전 반드시 점검해야 할 3가지 핵심 요소</h2>
+      <p><strong>① 이용 인원과 방 규모</strong> – 가라오케는 방마다 최대 수용 인원이 정해져 있습니다. 4인용 방을 원한다면 최소 4명부터, 8인용 방은 최소 6명 이상이 모여야 효율적으로 이용할 수 있습니다. 인원에 따라 가격이 달라지므로, 사전에 인원을 정확히 예측해 두면 예약 단계에서 자동으로 적절한 방을 제안받을 수 있습니다.</p>
+      <p><strong>② 예약 시간대와 피크 여부</strong> – 주말 저녁과 공휴일은 피크 타임으로 가격이 약간 상승하고, 방이 빨리 차게 됩니다. 만약 가격을 절감하고 싶다면 평일 저녁 6시 이전이나 새벽 1시 이후를 고려해 보세요. 또한, 피크 타임이라면 미리 연장 옵션을 확인해 두면 현장에서 급하게 연장을 요청할 때 발생할 수 있는 불편을 방지할 수 있습니다.</p>
+      <p><strong>③ 결제 수단 및 사전 인증</strong> – 가라오케는 현금, 카드, 모바일 결제 등을 지원합니다. 예약 시 카드 정보를 미리 입력하면 현장 결제 절차가 간소화됩니다. 또한, 일부 할인 쿠폰은 사전 입력이 필요하므로 모바일 앱이나 홈페이지에서 쿠폰 코드를 미리 복사해 두는 것이 좋습니다.</p>
+    </section>
 
-            <h3>2. 24시 운영? 개소리 집어치워</h3>
-            <p>“24시 운영”이라는 말에 속아서 새벽 3시에 쳐들어가지 마라. 실제 운영 시간은 업소마다 다르고, <strong>새벽 타임은 예약 필수</strong>다. 번화가지만 믿고 걸어가면 문 닫은 경우 허다해. 진짜로 24시 뚫리는 곳은 몇 군데 없고, 그중에서도 신도림 가라오케는 진짜 24시 가능한 몇 안 되는 곳이다. 그래도 예약 없이 가면 그냥 나가리다.</p>
+    <!-- 2. 이용 시 유용한 팁 -->
+    <section>
+      <h2>현장 이용 중 유용하게 쓸 수 있는 팁</h2>
+      <p>방에 들어서면 먼저 마이크와 스피커가 정상 작동하는지 확인하세요. 마이크 테스트 버튼을 눌러 음량이 적절히 잡히는지, 주변 소음 차단이 되는지를 체크하면 노래 중 갑작스러운 음질 저하를 예방할 수 있습니다. 또한, 노래 시작 전 곡 리스트를 미리 검색해 두면 원하는 곡을 빠르게 찾을 수 있어 대기 시간을 절감합니다.</p>
+      <p>가라오케는 음료와 스낵을 자동 주문할 수 있는 키오스크가 설치돼 있습니다. 주문은 방 안에서 바로 진행되며, 주문 내역은 실시간으로 확인할 수 있습니다. 주문 시에는 “1인당 최대 2개” 정도로 제한이 있기 때문에, 인원수에 맞게 미리 배분해 두면 과다 주문을 방지할 수 있습니다.</p>
+      <p>마지막으로, 방 이용이 끝난 뒤에는 마이크와 조명, 좌석 정리를 간단히 해 두는 것이 좋습니다. 청소 담당 직원이 바로 다음 방을 준비하는 데 도움이 되며, 작은 배려가 다음 고객에게도 좋은 인상을 남깁니다.</p>
+    </section>
 
-            <h3>3. 프라이빗 룸의 함정</h3>
-            <p>“프라이빗 룸”이라는 말에 혹해서 돈 더 내는 놈들 많다. 근데 프라이빗 룸에도 등급이 있다. <strong>진짜 방음, 진짜 독립 화장실, 진짜 별도 환기</strong> – 이 세 개 다 되는 곳이 진짜 프라이빗이다. 나머지는 그냥 칸막이에 커튼 친 거다. 예약할 때 반드시 <span class="highlight">“방음 완전 보장되나요? 화장실 방 안에 있나요?”</span> 두 가지 물어봐라. 대답이 시원찮으면 다른 데 가라.</p>
+    <!-- 3. 비용 정산과 연장 정책 -->
+    <section>
+      <h2>정산 방식과 연장·조기 종료 정책</h2>
+      <p>신도림 가라오케는 기본 요금 외에 실제 이용 시간에 따라 초과 요금을 부과합니다. 기본 시간(예: 2시간) 이후 분당 추가 요금이 발생하며, 연장은 최소 30분 단위로 신청할 수 있습니다. 연장은 사전 예약 시스템에서 ‘연장 신청’ 버튼을 눌러 바로 처리되며, 실시간으로 추가 금액이 반영됩니다.</p>
+      <p>반대로 조기 종료를 원할 경우, 최소 15분 전에는 직원에게 알려야 합니다. 조기 종료 시 남는 시간은 차감되지 않으며, 이미 결제된 금액이 그대로 유지됩니다. 다만, 예약 시간보다 크게 앞당겨 종료하면 차후 예약 시 ‘프리미엄 할인’ 쿠폰을 제공받을 수 있는 이벤트가 가끔 진행됩니다.</p>
+    </section>
 
-            <h3>4. 시스템은 최신일수록 좋다? 아니</h3>
-            <p>최신 시스템이 무조건 좋은 게 아니다. 오히려 너무 신형 기기는 곡도 적고, 리모컨 반응 느리고, 업데이트 자주 망가진다. <strong>검증된 시스템</strong> (TJ미디어, 금영)이 안정적이다. 업주가 “최신 스마트 시스템” 자랑하면 무시해라. 대신 “곡 수 몇 곡이에요? 반주 음질 어떤데요?”를 물어보는 놈이 진짜 고수다.</p>
+    <!-- 4. Frequently Asked Questions -->
+    <section>
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <h3>Q1. 예약 후 바로 취소하면 환불이 가능한가요?</h3>
+      <p>예, 예약 취소는 최소 2시간 이전까지 무료로 가능합니다. 2시간 이내에 취소할 경우 50% 환불 정책이 적용되며, 취소 사유에 따라 추가 비용이 발생할 수 있습니다.</p>
+      <h3>Q2. 대규모 파티(10명 이상)도 가능할까요?</h3>
+      <p>10명 이상 단체 이용 시 ‘대형 파티룸’ 예약이 필요합니다. 대형 파티룸은 별도 가격 정책이 있으며, 사전 상담을 통해 맞춤형 메뉴와 음향 설정을 조정할 수 있습니다.</p>
+      <h3>Q3. 노래 선택이 안 될 때는 어떻게 해야 하나요?</h3>
+      <p>노래 선택이 안 되는 경우, 먼저 인터넷 연결 상태와 키오스크 화면을 새로 고침해 보세요. 그래도 문제가 지속되면 방 안에 있는 비상 호출 버튼을 눌러 직원에게 바로 알려주면 신속히 해결해 드립니다.</p>
+      <h3>Q4. 청소년이 이용해도 될까요?</h3>
+      <p>청소년(13세 이상)도 부모 동의서와 신분증을 제시하면 이용 가능합니다. 다만, 심야(22시 이후) 이용은 제한되며, 최소 1부모가 동행해야 합니다.</p>
+    </section>
+  </main>
 
-            <h3>5. 돈 아끼는 꿀팁 (업주가 싫어함)</h3>
-            <ul>
-                <li><strong>주중 새벽 타임</strong> – 가장 싸고 룸도 널널하다. 단, 예약은 필수.</li>
-                <li><strong>단체 할인</strong> – 6명 이상이면 무조건 “단체 할인 없어요?” 물어봐라. 보통 10~20% 깎아준다.</li>
-                <li><strong>음료 반입</strong> – 업소마다 다르지만, “물만 가져와도 되나요?” 물어보는 게 기본 매너다. 안 된다고 하면 그냥 사 먹고, 된다고 하면 너 이득.</li>
-                <li><strong>멤버십/쿠폰</strong> – 전화할 때 “멤버십이나 첫 방문 쿠폰 있어요?”라고 물어봐. 있으면 바로 등록해.</li>
-            </ul>
-
-            <h3>6. 예약 확정 꿀팁</h3>
-            <p>전화하고 “네, 예약됐습니다”라는 말만 믿지 마라. <strong>문자나 카톡으로 확인</strong> 받아야 한다. 안 보내주면 “확인 문자 보내주세요”라고 요구해. 그래야 업주도 니 예약을 진짜로 기록한다. 나는 예약 후 30분 이내에 확인 안 오면 다시 전화해서 따진다. 이게 프로의 자세다.</p>
-
-            <p>결론: <span class="highlight">신도림 가라오케 예약, 대충 하면 니 시간과 돈만 날아간다.</span> 위 방법대로만 하면 넌 항상 승리한다. 지금 당장 전화해라: <a href="tel:01062790862" class="tel-link">010-6279-0862</a> – 이 번호는 진짜 예약 가능한 번호다. 다른 데 거르고 이 번호로만 해라.</p>
-
-            <div class="blog-footer">
-                <p>신도림 가라오케 예약 블로그 – 실제 경험과 업계 내부 정보를 기반으로 합니다. 문의: 010-6279-0862</p>
-                <p>※ 본 글은 개인 의견이 포함되어 있으며, 업소 상황은 변결될 수 있습니다. 예약 시 직접 확인하세요.</p>
-            </div>
-        </article>
-
-        <!-- 추가 정보성 카드 (옵션: 관련 FAQ 느낌) -->
-        <div class="card" style="margin-top: -8px;">
-            <h3>💬 자주 묻는 질문 (예약 전 필독)</h3>
-            <p><strong>Q: 예약은 꼭 전화로만 되나요?</strong><br>
-            A: 전화 예약이 가장 확실합니다. 앱이나 사이트는 실시간 반영이 안 되는 경우 많아요. 전화: 010-6279-0862</p>
-            <p><strong>Q: 몇 명부터 단체 할인인가요?</strong><br>
-            A: 보통 6명 이상. 정확한 기준은 전화로 물어보세요. “단체 할인 가능한가요?” 한마디면 됩니다.</p>
-            <p><strong>Q: 주차 가능한가요?</strong><br>
-            A: 대부분 가능하지만, 협소한 곳은 협력 주차장 이용. 예약할 때 “주차 돼요
+  <footer>
+    <section class="footer-links">
+      <p>© 2026 신도림 가라오케. 모든 권리 보유.</p>
+      <ul>
+        <li><a href="/privacy">개인정보 처리방침</a></li>
+        <li><a href="/terms">이용 약관</a></li>
+        <li><a href="/contact">고객 문의</a></li>
+      </ul>
+    </section>
+  </footer>
 </body>
 </html>
